@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Relating to Question 2</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Q2 Actions</label>
+    <visibility>Public</visibility>
+    <fields>
+        <fullName>Q2_Checklist__c</fullName>
+        <label>Q2 Checklist</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Q2_Todo_List__c</fullName>
+        <label>Q2 Todo List</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+</CustomObject>

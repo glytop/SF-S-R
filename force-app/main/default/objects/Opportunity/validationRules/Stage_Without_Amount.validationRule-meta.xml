@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Without_Amount</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISCHANGED( StageName ),  ISBLANK( Amount ) )</errorConditionFormula>
+    <errorMessage>You can&apos;t change stage if amount is null or empty</errorMessage>
+</ValidationRule>

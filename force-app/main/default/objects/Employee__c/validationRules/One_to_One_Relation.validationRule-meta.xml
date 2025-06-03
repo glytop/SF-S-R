@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_to_One_Relation</fullName>
+    <active>true</active>
+    <errorConditionFormula>Number_of_passes__c &gt; 1</errorConditionFormula>
+    <errorMessage>number of passes more than 1</errorMessage>
+</ValidationRule>
