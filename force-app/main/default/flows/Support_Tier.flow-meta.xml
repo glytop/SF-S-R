@@ -45,11 +45,24 @@
         <object>Support_Tier__mdt</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Lay</name>
+        <label>Lay</label>
+        <locationX>176</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Update_Gold_Account</name>
         <label>Update Gold Account</label>
         <locationX>176</locationX>
         <locationY>395</locationY>
+        <connector>
+            <targetReference>Lay</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Total_Spending__c</field>
@@ -84,5 +97,5 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
 </Flow>
