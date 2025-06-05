@@ -40,10 +40,6 @@
                 <field>Commission__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Region_Zone__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Discount_Percentage__c</field>
             </layoutItems>

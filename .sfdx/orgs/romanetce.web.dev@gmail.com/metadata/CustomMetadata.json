@@ -1,0 +1,109 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/Country_Codes.USA.md",
+      "fullName": "Country_Codes.USA",
+      "id": "m00Qy00000v4ykjIAA",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    },
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/Support_Tier.Gold.md",
+      "fullName": "Support_Tier.Gold",
+      "id": "m02Qy00000Iq6GfIAJ",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    },
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/VAT_Data.Japan.md",
+      "fullName": "VAT_Data.Japan",
+      "id": "m01Qy000019JpAnIAK",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    },
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/Support_Tier.Bronze.md",
+      "fullName": "Support_Tier.Bronze",
+      "id": "m02Qy00000Iq6DRIAZ",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    },
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/Country_Codes.Belarus.md",
+      "fullName": "Country_Codes.Belarus",
+      "id": "m00Qy00000v4xzyIAA",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    },
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/VAT_Data.Germany.md",
+      "fullName": "VAT_Data.Germany",
+      "id": "m01Qy000019JpFdIAK",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    },
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/Support_Tier.Silver.md",
+      "fullName": "Support_Tier.Silver",
+      "id": "m02Qy00000Iq6F3IAJ",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    },
+    {
+      "createdById": "005Qy000007GnTlIAK",
+      "createdByName": "Maksimilian Ramanets",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "customMetadata/Country_Codes.India.md",
+      "fullName": "Country_Codes.India",
+      "id": "m00Qy00000v4yO9IAI",
+      "lastModifiedById": "005Qy000007GnTlIAK",
+      "lastModifiedByName": "Maksimilian Ramanets",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "manageableState": "unmanaged",
+      "type": "CustomMetadata"
+    }
+  ]
+}
