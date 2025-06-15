@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : Maksimilian Ramanets
+ * @group             : 
+ * @last modified on  : 06-14-2025
+ * @last modified by  : Maksimilian Ramanets
+**/
 @IsTest
 private class AccountManagerTest {
     @isTest static void testGetAccount(){

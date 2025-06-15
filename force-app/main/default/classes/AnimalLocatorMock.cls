@@ -1,9 +1,14 @@
+/**
+ * @description       : 
+ * @author            : Maksimilian Ramanets
+ * @group             : 
+ * @last modified on  : 06-14-2025
+ * @last modified by  : Maksimilian Ramanets
+**/
 @isTest
 global class AnimalLocatorMock implements HttpCalloutMock{
  
-    // Implement this interface method
     global HTTPResponse respond(HTTPRequest request) {
-        // Create a fake response
         HttpResponse response = new HttpResponse();
         response.setHeader('Content-Type', 'application/json');
         response.setBody('{"animal":{"id":7,"name":"dog","eats":"meat","says":"i am a lovely pet animal"}}');

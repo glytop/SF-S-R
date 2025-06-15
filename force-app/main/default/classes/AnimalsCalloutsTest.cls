@@ -1,25 +1,25 @@
+/**
+ * @description       : 
+ * @author            : Maksimilian Ramanets
+ * @group             : 
+ * @last modified on  : 06-14-2025
+ * @last modified by  : Maksimilian Ramanets
+**/
 @isTest
 private class AnimalsCalloutsTest {
     @isTest 
     static void testGetCallout() {
-        // Create the mock response based on a static resource
         StaticResourceCalloutMock mock = new StaticResourceCalloutMock();
         mock.setStaticResource('GetAnimalResource');
         mock.setStatusCode(200);
         mock.setHeader('Content-Type', 'application/json;charset=UTF-8');
-        // Associate the callout with a mock response
         Test.setMock(HttpCalloutMock.class, mock);
-        // Call method to test
         HttpResponse result = AnimalsCallouts.makeGetCallout();
-        // Verify mock response is not null
         Assert.areNotEqual(null,result, 'The callout returned a null response.');
-        // Verify status code
         Assert.areEqual(200,result.getStatusCode(), 'The status code is not 200.');
-        // Verify content type
         Assert.areEqual('application/json;charset=UTF-8',
           result.getHeader('Content-Type'),
           'The content type value is not expected.');
-        // Verify the array contains 3 items
         Map<String, Object> results = (Map<String, Object>)
             JSON.deserializeUntyped(result.getBody());
         List<Object> animals = (List<Object>) results.get('animals');
@@ -28,12 +28,8 @@ private class AnimalsCalloutsTest {
     
     @isTest
     static void testPostCallout() {
-        // Set mock callout class
         Test.setMock(HttpCalloutMock.class, new AnimalsHttpCalloutMock());
-        // This causes a fake response to be sent
-        // from the class that implements HttpCalloutMock.
         HttpResponse response = AnimalsCallouts.makePostCallout();
-        // Verify that the response received contains fake values
         String contentType = response.getHeader('Content-Type');
         Assert.isTrue(contentType == 'application/json');
         String actualValue = response.getBody();
