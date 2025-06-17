@@ -1,1 +1,1 @@
-[]
+[{"_allAttributes":null,"_properties":null,"_methods":null,"file":"d:/Apex/Smile/force-app/main/default/lwc/forExample/forExample.js","metadata":{"decorators":[],"classMembers":[{"name":"text","type":"property","value":{"type":"string","value":"This text came from a JS prop"},"loc":{"start":{"line":4,"column":4},"end":{"line":4,"column":43}}}],"declarationLoc":{"start":{"line":3,"column":0},"end":{"line":5,"column":1}},"doc":"","exports":[{"type":"ExportDefaultDeclaration"}]},"updatedAt":"2025-06-15T04:57:29.767Z"}]

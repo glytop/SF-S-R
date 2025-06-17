@@ -21,30 +21,17 @@ delete countryCodeToD;
 
 Metadata.CustomMetadata cmdtRecord = new Metadata.CustomMetadata();
 cmdtRecord.fullName = 'Country_Codes__mdt.GG';
-cmdtRecord.label = 'GG';
+cmdtRecord.label = 'United States of America';
 
 Metadata.CustomMetadataValue phoneCodeField = new Metadata.CustomMetadataValue();
 phoneCodeField.field = 'Phone_Code__c';
-phoneCodeField.value = '+GG';
+phoneCodeField.value = '+1 (updated)';
 cmdtRecord.values.add(phoneCodeField);
 
 Metadata.DeployContainer deployContainer = new Metadata.DeployContainer();
 deployContainer.addMetadata(cmdtRecord);
 
-class Callback implements Metadata.DeployCallback {
-    public void handleResult(Metadata.DeployResult result, Metadata.DeployCallbackContext context) {
-        if (result.status == Metadata.DeployStatus.Succeeded) {
-            System.debug('Record created');
-        } else {
-            System.debug('Error: ' + result.errorMessage);
-            for (Metadata.DeployMessage msg : result.details.componentFailures) {
-                System.debug('Error in: ' + msg.fullName + ' → ' + msg.problem);
-            }
-        }
-    }
-}
-
-Id jobId = Metadata.Operations.enqueueDeployment(deployContainer, new Callback());
+Id jobId = Metadata.Operations.enqueueDeployment(deployContainer, null);
 System.debug('Job ID: ' + jobId);
 
 // remove CMDT
@@ -60,3 +47,16 @@ deleteContainer.addMetadata(recordToDelete);
 
 Id deleteJobId = Metadata.Operations.enqueueDeployment(deleteContainer, new Callback());
 System.debug('Job ID для удаления: ' + deleteJobId);
+
+class Callback implements Metadata.DeployCallback {
+    public void handleResult(Metadata.DeployResult result, Metadata.DeployCallbackContext context) {
+        if (result.status == Metadata.DeployStatus.Succeeded) {
+            System.debug('Record compelte');
+        } else {
+            System.debug('Error: ' + result.errorMessage);
+            for (Metadata.DeployMessage msg : result.details.componentFailures) {
+                System.debug('Error in: ' + msg.fullName + ' → ' + msg.problem);
+            }
+        }
+    }
+}

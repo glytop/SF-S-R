@@ -16,7 +16,7 @@ public class UpdateParentAccount implements Queueable {
     
     public void execute(QueueableContext context){
         for (Account acc : accList){
-            acc.ParentId = parentAccId;
+            acc.ParentId = parentAccId; 
         }
 
         update accList;

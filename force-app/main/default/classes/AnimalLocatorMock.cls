@@ -1,10 +1,3 @@
-/**
- * @description       : 
- * @author            : Maksimilian Ramanets
- * @group             : 
- * @last modified on  : 06-14-2025
- * @last modified by  : Maksimilian Ramanets
-**/
 @isTest
 global class AnimalLocatorMock implements HttpCalloutMock{
  
