@@ -32,26 +32,20 @@ Metadata.DeployContainer deployContainer = new Metadata.DeployContainer();
 deployContainer.addMetadata(cmdtRecord);
 
 Id jobId = Metadata.Operations.enqueueDeployment(deployContainer, null);
-System.debug('Job ID: ' + jobId);
 
 // remove CMDT
-String recordToDeleteJson = '{"fullName":"Country_Codes__mdt.Iran", "operation":"delete"}';
-
-Metadata.CustomMetadata recordToDelete = (Metadata.CustomMetadata) JSON.deserialize(
-    recordToDeleteJson, 
-    Metadata.CustomMetadata.class
-);
+Metadata.CustomMetadata recordToDelete = new Metadata.CustomMetadata();
+recordToDelete.fullName = 'Country_Codes__mdt.Iran';
 
 Metadata.DeployContainer deleteContainer = new Metadata.DeployContainer();
 deleteContainer.addMetadata(recordToDelete);
 
 Id deleteJobId = Metadata.Operations.enqueueDeployment(deleteContainer, new Callback());
-System.debug('Job ID для удаления: ' + deleteJobId);
 
 class Callback implements Metadata.DeployCallback {
     public void handleResult(Metadata.DeployResult result, Metadata.DeployCallbackContext context) {
         if (result.status == Metadata.DeployStatus.Succeeded) {
-            System.debug('Record compelte');
+            System.debug('Record removed');
         } else {
             System.debug('Error: ' + result.errorMessage);
             for (Metadata.DeployMessage msg : result.details.componentFailures) {

@@ -1,0 +1,14 @@
+.slds-input {
+    width: 85%;
+    border-radius: 10px;
+}
+
+.slds-button {
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.slds-box {
+    background-color: white;
+    padding: 20px;
+}

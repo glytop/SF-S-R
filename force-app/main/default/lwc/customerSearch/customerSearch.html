@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <lightning-input label="Client Search" value={searchKey} onchange={handleInputChange} placeholder="Input name..." >
+        </lightning-input>
+
+        <template if:true={results}>
+            <ul class="slds-m-top_medium">
+                <template for:each={results} for:item="acc">
+                <li key={acc.Id}>
+                    {acc.Name} — {acc.Phone}
+                </li>
+                </template>
+            </ul>
+        </template>
+
+    </lightning-card>
+    
+</template>
