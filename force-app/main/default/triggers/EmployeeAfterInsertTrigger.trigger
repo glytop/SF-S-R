@@ -5,4 +5,6 @@ trigger EmployeeAfterInsertTrigger on Employee__c (after insert) {
     }
 
     //Database.executeBatch(new Batch(Trigger.newMap.keySet()), 10);
+    //System.enqueueJob(new Queueable(Trigger.newMap.keySet()), 40);
+
 }
