@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Currency Converter" icon-name="utility:currency">
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                label="Amount (USD)" 
+                type="number" 
+                value={usd} 
+                onchange={handleInput}>
+            </lightning-input>
+
+            <lightning-combobox 
+                label="Target Currency" 
+                value={targetCurrency} 
+                options={currencyOptions}
+                onchange={handleCurrencyChange}
+                class="slds-m-top_small">
+            </lightning-combobox>
+
+            <lightning-button 
+                label="Convert" 
+                onclick={handleConvert} 
+                class="slds-m-top_small">
+            </lightning-button>
+
+            <template if:true={isLoading}>
+                <lightning-spinner size="small" alternative-text="Converting..."></lightning-spinner>
+            </template>
+
+            <template if:true={byn}>
+                <p class="slds-m-top_medium">Converted: <strong>{byn}</strong> {targetCurrency}</p>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error slds-m-top_small">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

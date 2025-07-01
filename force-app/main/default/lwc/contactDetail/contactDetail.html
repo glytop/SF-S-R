@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contacts" icon-name="utility:contact">
+        <div class="slds-p-around_medium rounded-datatable">
+            <template if:true={contacts.data}>
+                <lightning-datatable 
+                    key-field="Id" 
+                    data={contacts.data} 
+                    columns={columns}
+                    hide-checkbox-column
+                    class="slds-table slds-table_bordered slds-table_striped custom-style">
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

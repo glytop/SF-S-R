@@ -1,0 +1,24 @@
+.custom-style {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+::part(base) {
+    border: none;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+::part(table-header) {
+    background-color: #f4f6f9;
+}
+
+.lightning-datatable {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}

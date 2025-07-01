@@ -11,13 +11,12 @@ public class FutureMethod {
         
         HTTPResponse res = h.send(req);
         
-        Map<String, Object> jsonBody = (Map<String, Object>)Json.deserializeUntyped(res.getBody());
+        //Map<String, Object> jsonBody = (Map<String, Object>)Json.deserializeUntyped(res.getBody());
+        FxResponse jsonBody = (FxResponse)Json.deserialize(res.getBody(), FxResponse.class); 
         
         System.debug(jsonBody);
-        
-        Map<String, Object> mMap = (Map<String, Object>) jsonBody.get('rates');
-        
-        Decimal conversionRate = (Decimal) mMap.get('INR');
+                
+        Decimal conversionRate = jsonBody.rates.get('INR');
         
         inr = eur * conversionRate;
         System.debug(inr);
