@@ -4,7 +4,7 @@ private class TestCurrencyCalloutJob {
         Test.setMock(HttpCalloutMock.class, new CurrencyMock());
 
         Test.startTest();
-        System.enqueueJob(new CurrencyCalloutJob('EUR', 'BYN', 100));
+        System.enqueueJob(new ConverterQueueableCallout('EUR', 'BYN', 100));
         Test.stopTest();
 
         System.assert(true, 'Queue executed successfully');

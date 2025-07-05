@@ -11,13 +11,8 @@ global with sharing class CaseManager{
     }
 
     @HttpPost
-    global static ID createCase(String subject, String status, String origin, String priority){
-        Case thisCase = new Case(
-            Subject = subject, 
-            Status = status, 
-            Origin = origin, 
-            Priority = priority
-        );
+    global static ID createCase(){
+        Case thisCase = (Case) JSON.deserialize(RestContext.request.requestBody.toString(), Case.class);
         insert thisCase;
         return thisCase.Id;
     }
@@ -33,15 +28,11 @@ global with sharing class CaseManager{
     }
 
     @HttpPut
-    global static ID upsertCase(String subject, String status, String origin, String priority, String id){
-        Case thisCase = new Case(
-            Id = id, 
-            Subject = subject, 
-            Status = status, 
-            Origin = origin, 
-            Priority = priority
-        );
-
+    global static ID upsertCase(){
+        RestRequest request = RestContext.request;
+        String caseId = request.requestURI.substring(request.requestURI.lastIndexOf('/') + 1);
+        Case thisCase = (Case) JSON.deserialize(request.requestBody.toString(), Case.class);
+        thisCase.Id = caseId;
         upsert thisCase;
         return thisCase.Id;
     }

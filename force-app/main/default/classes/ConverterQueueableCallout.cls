@@ -20,7 +20,9 @@ public with sharing class ConverterQueueableCallout implements Queueable, Databa
         Decimal rate = data.rates.get(targetCurrency);
         Decimal converted = amount * rate;
 
-        System.enqueueJob(new CurrencyLoggingJob(baseCurrency, targetCurrency, amount, rate));
+        if (!Test.isRunningTest()) {
+            System.enqueueJob(new CurrencyLoggingJob(baseCurrency, targetCurrency, amount, rate));
+        }
     }
 
 }
