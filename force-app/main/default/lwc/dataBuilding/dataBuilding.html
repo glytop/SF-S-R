@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        Hello {name}!
+        My date of birth - {dateOfBirth} 
+        <div>
+            Email - {email}
+        </div>
+        <lightning-input label="Name" type="text" value={name} onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Date of Birth" type="date" value={dateOfBirth} onchange={handleDateOfBirthChange}></lightning-input>
+        <lightning-input label="Email" type="email" value={email} class="input-field"></lightning-input>
+        <lightning-button label="submit" onclick={handleSubmit}></lightning-button>
+    </lightning-card>
+</template>

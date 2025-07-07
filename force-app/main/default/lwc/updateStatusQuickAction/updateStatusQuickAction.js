@@ -9,8 +9,8 @@ export default class UpdateStatusQuickAction extends LightningElement {
     success = false;
     error;
 
-    handleClick() {
-        updateStatus({ recordId: this.recordId })
+    async handleClick() {
+        await updateStatus({ recordId: this.recordId })
             .then(() => {
                 getRecordNotifyChange([{ recordId: this.recordId }]);
     
@@ -24,7 +24,7 @@ export default class UpdateStatusQuickAction extends LightningElement {
                     }));
                 }, 100); 
             })
-            .catch((err) => {
+            .catch((err) => {   
                 this.dispatchEvent(new ShowToastEvent({
                     title: 'Error',
                     message: err.body?.message || 'Unexpected error occurred.',
