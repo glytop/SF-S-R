@@ -1,0 +1,12 @@
+<template>
+    <c-contact-data-provider oncontactsready={setContactsDetail}></c-contact-data-provider>
+
+    <template for:each={contacts} for:item="c">
+        <c-contact-card
+            key={c.Id}
+            name={c.LastName}
+            email={c.Email}
+            phone={c.Phone}>
+        </c-contact-card>
+    </template>
+</template>

@@ -3,6 +3,7 @@ import getContactsBornAfter from '@salesforce/apex/ContactController.getContacts
 
 export default class CallApexImperative extends LightningElement {
     @api minBirthDate;
+
     handleButtonClick() {
         getContactsBornAfter({
             birthDate: this.minBirthDate
@@ -12,4 +13,5 @@ export default class CallApexImperative extends LightningElement {
             .catch(error => {
             });
     }
+
 }

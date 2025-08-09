@@ -14,8 +14,6 @@ export default class DataBuilding extends LightningElement {
     }
 
     handleSubmit(event){
-        let input = this.template.querySelector('.input-field');
-
-        this.email = input.value;
+        this.email = this.template.querySelector('.input-field').value;
     }
 }

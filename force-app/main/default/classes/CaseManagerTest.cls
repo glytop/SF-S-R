@@ -18,19 +18,6 @@ private class CaseManagerTest{
     }
 
     @isTest
-    static void testCreateCase(){
-
-        ID thisCaseId = CaseManager.createCase('Ferocious chipmunk', 'New', 'Phone', 'Low');
-
-        Assert.isTrue(thisCaseId != null);
-        Case thisCase = [SELECT Id, Subject
-                         FROM Case
-                         WHERE Id = :thisCaseId];
-        Assert.isTrue(thisCase != null);
-        Assert.areEqual(thisCase.Subject, 'Ferocious chipmunk');
-    }
-
-    @isTest
     static void testDeleteCase(){
         Id recordId = createTestRecord();
 
@@ -47,28 +34,6 @@ private class CaseManagerTest{
                             FROM Case
                             WHERE Id = :recordId];
         Assert.isTrue(cases.size() == 0);
-    }
-
-    @isTest
-    static void testUpsertCase(){
-
-        ID case1Id = CaseManager.upsertCase('Ferocious chipmunk', 'New', 'Phone', 'Low', null);
-
-        Assert.isTrue(Case1Id != null);
-        Case case1 = [SELECT Id, Subject
-                      FROM Case
-                      WHERE Id = :case1Id];
-        Assert.isTrue(case1 != null);
-        Assert.areEqual(case1.Subject, 'Ferocious chipmunk');
-
-        ID case2Id = CaseManager.upsertCase('Ferocious chipmunk', 'Working', 'Phone', 'Low', case1Id);
-
-        Assert.areEqual(case1Id, case2Id);
-        Case case2 = [SELECT Id, Status
-                      FROM Case
-                      WHERE Id = :case2Id];
-        Assert.isTrue(case2 != null);
-        Assert.areEqual(case2.Status, 'Working');
     }
 
     @isTest

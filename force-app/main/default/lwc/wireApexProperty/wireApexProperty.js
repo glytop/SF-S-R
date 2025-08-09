@@ -3,6 +3,17 @@ import getContactsBornAfter from '@salesforce/apex/ContactController.getContacts
 
 export default class WireApexProperty extends LightningElement {
     @api minBirthDate;
+    // contacts;
+    // error;
+    
     @wire(getContactsBornAfter, { birthDate: '$minBirthDate' })
-    contacts;
+    contacts/**
+    ({ error, data }){
+    if (data) {
+    this.contacts = data;
+    } else if (error) {
+        this.error = error; 
+    }
+    }    
+    */;
 }

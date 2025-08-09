@@ -10,6 +10,12 @@ export default class ContactUpdater extends LightningElement {
     @track contact = {};
     wiredContactResult;
 
+    name;
+
+    onChange(event){
+        this.name = event.target.value;
+    }
+
     @wire(getContact, { recordId: '$recordId' })
     wiredContact(result) {
         this.wiredContactResult = result;
@@ -25,8 +31,8 @@ export default class ContactUpdater extends LightningElement {
         this.contact = { ...this.contact, [name]: value };
     }
 
-    handleSave() {
-        updateContact({ contactToUpdate: this.contact })
+    async handleSave() {
+        await updateContact({ contactToUpdate: this.contact })
             .then(() => {
                 this.showToast('Success', 'Contact updated', 'success');
                 getRecordNotifyChange([{ recordId: this.recordId }]);

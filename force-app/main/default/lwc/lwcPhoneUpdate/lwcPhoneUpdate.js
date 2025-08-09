@@ -8,26 +8,23 @@ export default class LwcPhoneUpdate extends LightningElement {
     @api recordId;
     userInput;
 
-    handleChange(event){
+    handleChange(event) {
         this.userInput = event.target.value;
     }
 
-    handleClick(){
+    async handleClick() {
 
-        const fields = {};
-
-        fields[ID_FIELD.fieldApiName] = this.recordId;
-        fields[PHONE_FIELD.fieldApiName] = this.userInput;
-
-        const recordInput = {
-            fields: fields
+        const fields = {
+            [ID_FIELD.fieldApiName]: this.recordId,
+            [PHONE_FIELD.fieldApiName]: this.userInput
         };
 
-        updateRecord(recordInput).then(result => {
-            console.log(JSON.stringify(result));
-        }).catch(error => {
-            console.log('error: ' + JSON.stringify(error));
-        })
+        const recordInput = {
+            fields
+        };
+
+        const result = await updateRecord(recordInput);
+        console.log(JSON.stringify(result));
 
         this.dispatchEvent(new CloseActionScreenEvent());
     }
